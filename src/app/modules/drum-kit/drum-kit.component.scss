@@ -1,0 +1,40 @@
+:host {
+  display: flex;
+  background-image: url('/assets/drum-kit/background.jpeg');
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  background-position: top center;
+}
+
+.button {
+  border: 3px solid black;
+  border-radius: 4px;
+  width: 90px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba($color: #000000, $alpha: 0.6);
+  gap: 4px;
+  cursor: pointer;
+  transition: all 0.1s;
+
+  &-key {
+    color: white;
+    font-size: 28px;
+  }
+
+  &-sound {
+    color: orange;
+    font-size: 10px;
+    text-transform: uppercase;
+  }
+
+  &.active {
+    transform: scale(1.1);
+    border-color: orange;
+  }
+}

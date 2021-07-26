@@ -1,0 +1,12 @@
+<ng-container *ngFor="let button of buttons">
+  <button 
+    [ngClass]="{'active': button.key === pressedButtonKey}"
+    (click)="playSound(button.key, drumAudio)"
+    class="button"
+    [attr.data-key]="button.key"
+  >
+    <kbd class="button-key">{{button.key}}</kbd>
+    <span class="button-sound">{{button.sound}}</span>
+    <audio #drumAudio src="assets/drum-kit/{{button.sound}}.wav"></audio>
+  </button>
+</ng-container>
