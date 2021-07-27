@@ -1,0 +1,63 @@
+$clock-size: 300px;
+
+:host {
+  display: flex;
+  background-image: url('/assets/clock/clock-background.jpeg');
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  min-width: $clock-size;
+  min-height: $clock-size;
+}
+
+.clock {
+  width: $clock-size;
+  height: $clock-size;
+  border: calc(#{$clock-size} * 0.05) solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: calc(#{$clock-size} * 0.07);
+    height: calc(#{$clock-size} * 0.07);
+    display: block;
+    background-color: black;
+    border-radius: 50%;
+    z-index: 5;
+  }
+
+  &-hand {
+    background-color: black;
+    border-radius: 4px;
+    position: absolute;
+    transform-origin: right;
+    transform: translateX(-50%) rotate(90deg);
+  }
+
+  &-hour {
+    height: calc(#{$clock-size} * 0.03);
+    width: 35%;
+    z-index: 1;
+  }
+
+  &-minute {
+    height: calc(#{$clock-size} * 0.02);
+    width: 40%;
+    z-index: 2;
+  }
+
+  &-seconds {
+    background-color: red;
+    height: calc(#{$clock-size} * 0.01);
+    width: 45%;
+    z-index: 3;
+  }
+}
