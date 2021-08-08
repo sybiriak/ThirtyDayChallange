@@ -1,3 +1,4 @@
+import { MenuModule } from './modules/menu/menu.module';
 import { ClockModule } from './modules/clock/clock.module';
 import { DrumKitModule } from './modules/drum-kit/drum-kit.module';
 import { NgModule } from '@angular/core';
@@ -14,7 +15,8 @@ import { AppComponent } from './app.component';
     BrowserModule,
     AppRoutingModule,
     DrumKitModule,
-    ClockModule
+    ClockModule,
+    MenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

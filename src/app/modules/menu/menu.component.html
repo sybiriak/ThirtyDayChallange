@@ -1,0 +1,25 @@
+<div
+  (clickOutside)="isOpened = false"
+  appClickOutside
+  class="menu"
+>
+  <button class="menu-button" (click)="isOpened = !isOpened">
+    <span class="menu-button-line">&mdash;</span>
+    <span class="menu-button-line">&mdash;</span>
+    <span class="menu-button-line">&mdash;</span>
+  </button>
+  
+  <div
+    *ngIf="isOpened"
+    class="menu-content"
+  >
+    <ng-container *ngFor="let menuItem of menuItems">
+      <button
+        class="menu-content-item"
+        (click)="goTo(menuItem.path)"
+      >
+        {{menuItem.name}}
+      </button>
+    </ng-container>
+  </div>
+</div>

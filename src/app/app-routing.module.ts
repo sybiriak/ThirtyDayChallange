@@ -1,3 +1,4 @@
+import { ROUTES } from './app-routing.constants';
 import { ClockComponent } from './modules/clock/clock.component';
 import { DrumKitComponent } from './modules/drum-kit/drum-kit.component';
 import { NgModule } from '@angular/core';
@@ -7,14 +8,14 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'drum-kit'
+    redirectTo: ROUTES.drumKit.path
   },
   {
-    path: 'drum-kit',
+    path: ROUTES.drumKit.path,
     component: DrumKitComponent
   },
   {
-    path: 'clock',
+    path: ROUTES.clock.path,
     component: ClockComponent
   }
 ];

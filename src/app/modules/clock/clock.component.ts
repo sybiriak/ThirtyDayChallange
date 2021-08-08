@@ -1,11 +1,12 @@
-import { Component, ViewChild, ElementRef, AfterViewInit, Renderer2 } from '@angular/core';
+import { Component, ViewChild, ElementRef, Renderer2, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-clock',
   templateUrl: './clock.component.html',
-  styleUrls: ['./clock.component.scss']
+  styleUrls: ['./clock.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ClockComponent implements AfterViewInit {
+export class ClockComponent {
 
   @ViewChild('clockHourHand', { static: true })
   clockHourHand!: ElementRef<HTMLDivElement>;
@@ -16,9 +17,7 @@ export class ClockComponent implements AfterViewInit {
   @ViewChild('clockSecondsHand', { static: true })
   clockSecondsHand!: ElementRef<HTMLDivElement>;
 
-  constructor(private renderer2: Renderer2) {}
-
-  ngAfterViewInit() {
+  constructor(private renderer2: Renderer2) {
     this.initClock();
   }
 
