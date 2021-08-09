@@ -3,6 +3,7 @@ import { ClockComponent } from './modules/clock/clock.component';
 import { DrumKitComponent } from './modules/drum-kit/drum-kit.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CssVariablesComponent } from './modules/css-variables/css-variables.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: ROUTES.clock.path,
     component: ClockComponent
+  },
+  {
+    path: ROUTES.cssVariables.path,
+    component: CssVariablesComponent
   }
 ];
 

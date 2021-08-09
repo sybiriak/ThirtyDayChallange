@@ -1,0 +1,42 @@
+<h2>Update CSS Variables with <span class="highlights">JS</span></h2>
+<section class="controls">
+  <label for="spacingInput">Spacing:</label>
+  <input 
+    #spacingInput
+    id="spacingInput"
+    name="spacing"
+    type="range"
+    min="10"
+    max="200"
+    [(ngModel)]="spacing"
+    data-sizing="px"
+    (ngModelChange)="handleChange($event, spacingInput)"
+  >
+
+  <label for="blurInput">Blur:</label>
+  <input
+    #blurInput
+    id="blurInput"
+    name="blur"
+    type="range"
+    min="0"
+    max="25"
+    [(ngModel)]="blur"
+    data-sizing="px"
+    (ngModelChange)="handleChange($event, blurInput)"
+  >
+
+  <label for="colorInput">Base Color:</label>
+  <input
+    #colorInput
+    id="colorInput"
+    name="color"
+    type="color"
+    [(ngModel)]="color"
+    (ngModelChange)="handleChange($event, colorInput)"
+  >
+</section>
+
+<article class="content">
+  <img src="assets/css-variables/css-variables-image.jpeg" alt="CSS Variables Image">
+</article>

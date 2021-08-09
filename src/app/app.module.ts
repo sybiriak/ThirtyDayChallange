@@ -1,3 +1,4 @@
+import { CssVariablesModule } from './modules/css-variables/css-variables.module';
 import { MenuModule } from './modules/menu/menu.module';
 import { ClockModule } from './modules/clock/clock.module';
 import { DrumKitModule } from './modules/drum-kit/drum-kit.module';
@@ -16,6 +17,7 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     DrumKitModule,
     ClockModule,
+    CssVariablesModule,
     MenuModule
   ],
   providers: [],

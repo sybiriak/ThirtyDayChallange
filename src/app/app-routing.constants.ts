@@ -14,5 +14,9 @@ export const ROUTES: IRoutes = {
   clock: {
     path: 'clock',
     name: 'Clock'
+  },
+  cssVariables: {
+    path: 'css-variables',
+    name: 'Css Variables'
   }
 }
