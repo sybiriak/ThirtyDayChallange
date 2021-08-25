@@ -4,6 +4,7 @@ import { DrumKitComponent } from './modules/drum-kit/drum-kit.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CssVariablesComponent } from './modules/css-variables/css-variables.component';
+import { ArrayCardioComponent } from './modules/array-cardio/array-cardio.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: ROUTES.cssVariables.path,
     component: CssVariablesComponent
+  },
+  {
+    path: ROUTES.arrayCardio.path,
+    component: ArrayCardioComponent
   }
 ];
 

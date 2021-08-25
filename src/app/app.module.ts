@@ -1,3 +1,4 @@
+import { ArrayCardioModule } from './modules/array-cardio/array-cardio.module';
 import { CssVariablesModule } from './modules/css-variables/css-variables.module';
 import { MenuModule } from './modules/menu/menu.module';
 import { ClockModule } from './modules/clock/clock.module';
@@ -18,7 +19,8 @@ import { AppComponent } from './app.component';
     DrumKitModule,
     ClockModule,
     CssVariablesModule,
-    MenuModule
+    MenuModule,
+    ArrayCardioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

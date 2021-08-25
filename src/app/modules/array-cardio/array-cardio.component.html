@@ -1,0 +1,39 @@
+<div class="container">
+  <h3>1. Filter the list of inventors for those who were born in the 1500's</h3>
+  <ng-container *ngTemplateOutlet="inventorsTable; context: { inventors: inventors1500s }"></ng-container>
+  <h3>2. Give us an array of the inventors first and last names</h3>
+  <ng-container *ngTemplateOutlet="fullName; context: { people: inventorsFullNames }"></ng-container>
+  <h3>3. Sort the inventors by birthdate, oldest to youngest</h3>
+  <ng-container *ngTemplateOutlet="inventorsTable; context: { inventors: inventorsSortedByYear }"></ng-container>
+  <h3>4. How many years did all the inventors live all together?</h3>
+  <p>{{inventorsYearsOfLive}}</p>
+  <h3>5. Sort the inventors by years lived</h3>
+  <ng-container *ngTemplateOutlet="inventorsTable; context: { inventors: inventorsSortedByYearsOfLive }"></ng-container>
+  <h3>6. Sort the people alphabetically by last name</h3>
+  <ng-container *ngTemplateOutlet="fullName; context: { people: peopleSorterByLastName }"></ng-container>
+  <h3>7. Sum up the instances of each of these in data</h3>
+  <ng-container *ngFor="let item of transportsCount | keyvalue">
+    <span>{{item.key}}: {{item.value}}</span><br>
+  </ng-container>
+</div>
+
+<ng-template #inventorsTable let-inventors="inventors">
+  <table>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Year</th>
+      <th>Passed</th>
+    </tr>
+    <tr *ngFor="let inventor of inventors">
+      <td>{{inventor.first}}</td>
+      <td>{{inventor.last}}</td>
+      <td>{{inventor.year}}</td>
+      <td>{{inventor.passed}}</td>
+    </tr>
+  </table>
+</ng-template>
+
+<ng-template #fullName let-people="people">
+  <span *ngFor="let person of people">{{person}}; </span>
+</ng-template>

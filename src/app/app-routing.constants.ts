@@ -18,5 +18,9 @@ export const ROUTES: IRoutes = {
   cssVariables: {
     path: 'css-variables',
     name: 'Css Variables'
+  },
+  arrayCardio: {
+    path: 'array-cardio',
+    name: 'Array Cardio'
   }
 }

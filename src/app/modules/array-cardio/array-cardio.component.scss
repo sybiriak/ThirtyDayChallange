@@ -1,0 +1,26 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background-color: darken($color: brown, $amount: 30%);
+  color: white;
+}
+
+.container {
+  max-width: 1000px;
+  padding: 30px;
+  margin: 0 auto;
+}
+
+table {
+  --table-color: rgba(255, 255, 255, 0.5);
+
+  width: 100%;
+  text-align: left;
+  border: 1px solid var(--table-color);
+  border-collapse: collapse;
+
+  td, th {
+    border: 1px solid var(--table-color);
+    padding: 5px;
+  }
+}
