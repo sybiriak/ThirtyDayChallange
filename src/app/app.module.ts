@@ -1,3 +1,4 @@
+import { FlexPanelsModule } from './modules/flex-panels/flex-panels.module';
 import { ArrayCardioModule } from './modules/array-cardio/array-cardio.module';
 import { CssVariablesModule } from './modules/css-variables/css-variables.module';
 import { MenuModule } from './modules/menu/menu.module';
@@ -20,7 +21,8 @@ import { AppComponent } from './app.component';
     ClockModule,
     CssVariablesModule,
     MenuModule,
-    ArrayCardioModule
+    ArrayCardioModule,
+    FlexPanelsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

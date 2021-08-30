@@ -1,0 +1,13 @@
+<section class="panels">
+  <ng-container *ngFor="let item of panels; let i = index">
+    <div
+      [class]="'panel panel' + (i + 1)"
+      [ngClass]="{open: item.active}"
+      (click)="item.active = !item.active"
+    >
+      <p>{{item.first}}</p>
+      <p>{{item.second}}</p>
+      <p>{{item.third}}</p>
+    </div>
+  </ng-container>
+</section>

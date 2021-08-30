@@ -1,3 +1,4 @@
+import { FlexPanelsComponent } from './modules/flex-panels/flex-panels.component';
 import { ROUTES } from './app-routing.constants';
 import { ClockComponent } from './modules/clock/clock.component';
 import { DrumKitComponent } from './modules/drum-kit/drum-kit.component';
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: ROUTES.arrayCardio.path,
     component: ArrayCardioComponent
+  },
+  {
+    path: ROUTES.flexPanels.path,
+    component: FlexPanelsComponent
   }
 ];
 

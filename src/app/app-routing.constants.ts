@@ -22,5 +22,9 @@ export const ROUTES: IRoutes = {
   arrayCardio: {
     path: 'array-cardio',
     name: 'Array Cardio'
+  },
+  flexPanels: {
+    path: 'flex-panels',
+    name: 'Flex Panels'
   }
 }
